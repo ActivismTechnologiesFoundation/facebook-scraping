@@ -14,3 +14,11 @@ def get_events_csv(groupId):
     events = get_events_for_group(groupId)
     csv_str = convert_to_csv(events)
     return csv_str
+
+@api.route("/<groupId>/csv/download")
+def get_events_csv_download(groupId):
+    events = get_events_for_group(groupId)
+    csv_str = convert_to_csv(events)
+    response = make_response(csv_str)
+    response.headers["Content-Disposition"] = "attachment; filename=events.csv"
+    return response
