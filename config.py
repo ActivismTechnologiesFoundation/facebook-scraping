@@ -10,6 +10,11 @@ class Config:
     if not FB_APP_SECRET:
         raise Exception("FB_APP_SECRET environment variable must be specified.")
 
+    CSV_COLUMN_ORDER = ["name", "link", "street_address", "city", "state",\
+            "start_date", "end_date", "description"]
+
+    OUTPUT_TIMESTAMP_FORMAT = "%A, %B %d %Y %I:%M %p %z"
+
     @staticmethod
     def init_app(app):
         pass

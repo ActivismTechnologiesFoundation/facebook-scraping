@@ -3,3 +3,5 @@
 bin
 lib
 include
+*.swp
+.DS_Store
