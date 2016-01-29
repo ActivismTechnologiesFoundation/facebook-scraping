@@ -10,6 +10,8 @@ class Config:
     if not FB_APP_SECRET:
         raise Exception("FB_APP_SECRET environment variable must be specified.")
 
+    FB_MAX_EVENT_RESULTS = 100
+
     CSV_COLUMN_ORDER = ["name", "link", "street_address", "city", "state",\
             "start_date", "end_date", "description"]
 
