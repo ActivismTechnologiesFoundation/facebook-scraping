@@ -9,7 +9,8 @@ def get_common_params(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         default_max_results = current_app.config["FB_MAX_EVENT_RESULTS"]
-        g.max_results = request.args.get("maxResults", default_max_results)
+        g.max_results = int(request.args.get("maxResults",\
+            default_max_results))
         return func(*args, **kwargs)
     return wrapper
 
