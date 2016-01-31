@@ -17,6 +17,8 @@ class Config:
 
     OUTPUT_TIMESTAMP_FORMAT = "%A, %B %d %Y %I:%M %p %z"
 
+    ARG_TIMESTAMP_FORMAT = "%Y-%m-%dT%H:%M:%SZ"
+
     @staticmethod
     def init_app(app):
         pass
